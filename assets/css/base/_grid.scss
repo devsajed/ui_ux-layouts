@@ -1,100 +1,90 @@
-@use "sass:math";
 
-.container{
-    width:100%;
-    margin: 0 auto;
-    padding: 0 15px;
-    .row{
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -15px;
-        justify-content: space-between;
-    }
-}
+// @use "sass:math";
 
-$columns :12;
-$grid_breakpoints_xxl : 1400px;
-$grid_breakpoints_xl : 1200px;
-$grid_breakpoints_lg : 992px;
-$grid_breakpoints_md : 768px;
-$grid_breakpoints_sm : 576px;
-$grid_breakpoint_xs : 575.98px;
-
-
-@media only screen and (min-width: $grid_breakpoints_xxl) {
-    .container{
-        max-width: 1320px;
-    }
-
-    @for $i from 1 through $columns {
-        .col-xxl-#{$i}{
-            width:(100 / $columns *$i * 1%);
-            padding: 0 15px;
-        }
-    }
-}
-
-@media only screen and (min-width: $grid_breakpoints_xl) {
-    .container{
-        max-width: 1140px;
-    }
-
-    @for $i from 1 through $columns {
-        .col-xl-#{$i}{
-            width:(100 / $columns *$i * 1%);
-            padding: 0 15px;
-        }
-    }
-}
-
-@media only screen and (min-width: $grid_breakpoints_lg) {
-    .container{
-        max-width: 960px;
-    }
-
-    @for $i from 1 through $columns {
-        .col-lg-#{$i}{
-            width:(100 / $columns *$i * 1%);
-            padding: 0 15px;
-        }
-    }
-}
-
-@media only screen and (min-width: $grid_breakpoints_md) {
-    .container{
-        max-width: 720px;
-    }
-
-    @for $i from 1 through $columns {
-        .col-md-#{$i}{
-            width:(100 / $columns *$i * 1%);
-            padding: 0 15px;
-        }
-    }
-}
-
-@media only screen and (min-width: $grid_breakpoints_sm) {
-    .container{
-        max-width: 540px;
-    }
-
-    @for $i from 1 through $columns {
-        .col-sm-#{$i}{
-            width:(100 / $columns *$i * 1%);
-            padding: 0 15px;
-        }
-    }
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (max-width: $grid_breakpoint_xs) {
-    .container {
-      max-width: 100%;
-    }
-  
-    @for $i from 1 through 12 {
-      .col-#{$i} {
-        width:(100 / $columns *$i * 1%);
-        padding: 0 15px;
-      }   
+  .container {
+    max-width: 100%;
+  }
+
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      width: (100 / $columns * $i * 1%);
+      padding: 0 15px;
     }
   }
+}
+
+@media only screen and (min-width: $grid_breakpoints_sm) {
+  .container {
+    max-width: 540px;
+  }
+
+  @for $i from 1 through $columns {
+    .col-sm-#{$i} {
+      width: (100 / $columns * $i * 1%);
+      padding: 0 15px;
+    }
+  }
+}
+@media only screen and (min-width: $grid_breakpoints_md) {
+  .container {
+    max-width: 720px;
+  }
+
+  @for $i from 1 through $columns {
+    .col-md-#{$i} {
+      width: (100 / $columns * $i * 1%);
+      padding: 0 15px;
+    }
+  }
+}
+@media only screen and (min-width: $grid_breakpoints_lg) {
+  .container {
+    max-width: 960px;
+  }
+
+  @for $i from 1 through $columns {
+    .col-lg-#{$i} {
+      width: (100 / $columns * $i * 1%);
+      padding: 0 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: $grid_breakpoints_xl) {
+  .container {
+    max-width: 1140px;
+  }
+
+  @for $i from 1 through $columns {
+    .col-xl-#{$i} {
+      width: (100 / $columns * $i * 1%);
+      padding: 0 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: $grid_breakpoints_xxl) {
+  .container {
+    max-width: 1320px;
+  }
+
+  @for $i from 1 through $columns {
+    .col-xxl-#{$i} {
+      width: (100 / $columns * $i * 1%);
+      padding: 0 15px;
+    }
+  }
+}

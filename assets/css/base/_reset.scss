@@ -1,9 +1,47 @@
+
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+ul,
+li {
+  list-style: none;
+}
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
